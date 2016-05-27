@@ -1,0 +1,109 @@
+{
+  "name": "UserAccount",
+  "base": "User",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "bankAccountNum": {
+      "type": "string"
+    },
+    "chineseName": {
+      "type": "string"
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "dialect": {
+      "type": [
+        "number"
+      ]
+    },
+    "escortAvaiTimeSlot": {
+      "type": [
+        "number"
+      ]
+    },
+    "escortPreferLocation": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "firstAidCert": {
+      "type": "boolean"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "membershipNum": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "profilePicName": {
+      "type": "string"
+    },
+    "residentialAddress": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "string"
+    },
+    "telephoneNum": {
+      "type": "string"
+    },
+    "userRole": {
+      "type": "number"
+    },
+    "userValidated": {
+      "type": "boolean"
+    },
+    "weight": {
+      "type": "number"
+    },
+    "wheelChair": {
+      "type": "boolean"
+    },
+    "escortPreferLocationDistrict": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "staffMeetingHistory": {
+      "type": "hasMany",
+      "model": "MeetingHistory",
+      "foreignKey": "staffID"
+    },
+    "patientMeetingHistory": {
+      "type": "hasMany",
+      "model": "MeetingHistory",
+      "foreignKey": "patientID"
+    },
+    "escortMeetingHistory": {
+      "type": "hasMany",
+      "model": "MeetingHistory",
+      "foreignKey": "escortID"
+    },
+    "PatientMeetingPosting": {
+      "type": "hasMany",
+      "model": "PatientMeetingPosting",
+      "foreignKey": "patientIDPatientMeetingPosting"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

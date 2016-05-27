@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false,
+    "strict": true
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false,
+    "strict": true
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "MeetingHistory": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "PatientMeetingPosting": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "UserAccount": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "staffNotification": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "patientNotification": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "escortNotification": {
+    "dataSource": "newDatasource",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  }
+}
